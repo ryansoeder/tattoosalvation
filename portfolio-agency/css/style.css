@@ -1106,9 +1106,6 @@ dd {
 .owl-carousel {
     height: 800px;
 }
-.owl-carousel img {
-    object-fit: cover;
-}
 
 /* piercing section */
 .piercing-sec .container {
@@ -1336,6 +1333,9 @@ dd {
     }
     .owl-carousel {
         height: 400px;
+    }
+    .owl-carousel img {
+        object-fit: cover;
     }
     .artist .container-fluid .owl-item img {
         margin-left: auto;
