@@ -90,9 +90,12 @@ body{
     transition: .5s ease;
     z-index: 11;
 }
-.btn-main:hover {
+.btn-main:hover,.btn-main:focus {
     color: #ffffff;
     background-color:#000000;
+}
+.btn-main:focus {
+    border: 2px solid #ec3737;
 }
 .btn-main-inverse{
     position: relative;
@@ -147,10 +150,13 @@ body{
     background-position: 100%;
 }
 
-.anim-text:hover,.anim-text-white:hover {
+.anim-text:hover,.anim-text-white:hover,.anim-text:focus,.anim-text-white:focus {
     -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     background-position: 0%;
+}
+.anim-text:focus,.anim-text-white:focus {
+    border: 2px solid #ec3737;
 }
 .padding-top{
     padding-top: 120px;
@@ -639,6 +645,9 @@ header .navbar-brand img {
 .navbar-nav .nav-heading{
     text-transform: uppercase;
 }
+.navbar-nav .artist-nav {
+    margin-left: 20px;
+}
 .sidenav-bottom{
     position: absolute;
     bottom: 0;
@@ -682,10 +691,10 @@ header .navbar-brand img {
     transition: .5s ease;
 
 }
-.social-icons span a:hover{
+.social-icons span a:hover,.social-icons span a:focus{
     background-color: #000000;
 }
-.social-icons span a:hover i{
+.social-icons span a:hover,.social-icons span a:focus i{
     color: #ffffff;
 }
 .social-icons span i{
@@ -827,10 +836,13 @@ header .navbar-brand img {
     background-position: 100%;
 }
 
-.portfolio-sec .work-navigation a:hover{
+.portfolio-sec .work-navigation a:hover,.portfolio-sec .work-navigation a:focus{
     -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     background-position: 0%;
+}
+.portfolio-sec .work-navigation a:focus {
+    border: solid 1px #ec3737;
 }
 .portfolio-sec .work-navigation a i{
     font-size: 34px;
@@ -992,6 +1004,9 @@ header .navbar-brand img {
 /*=================================
         Custom Styles
 ===================================*/
+a:focus {
+    border: solid 1px #ec3737;
+}
 
 dd {
     margin-inline-start: 0;
