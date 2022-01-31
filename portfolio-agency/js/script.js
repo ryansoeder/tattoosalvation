@@ -108,7 +108,7 @@ jQuery(function ($) {
                 handleImageResize(el);
             });
             
-            $(el).owlCarousel({
+            $(this).owlCarousel({
               animateIn: 'fadeIn',
               animateOut: 'fadeOut',
               autoWidth: false,
@@ -136,7 +136,19 @@ jQuery(function ($) {
               }
   
             });
-          });
+        });
+        // Custom Navigation Events
+        $('.portfolio-right-arr').each(function() {
+            $(this).click(function(){
+                $(this).closest('.col-12').find('.owl-carousel').trigger('next.owl.carousel');
+                
+            });
+        });
+        $('.portfolio-left-arr').each(function() {
+            $(this).click(function(){
+                $(this).closest('.col-12').find('.owl-carousel').trigger('prev.owl.carousel');
+            });
+        });
 
         // $('.portfolio-carousel').owlCarousel({
 
@@ -165,16 +177,21 @@ jQuery(function ($) {
 
         // });
 
-        $('.portfolio-right-arr').click(function() {
-            var owl = $('.portfolio-carousel');
-            owl.owlCarousel();
-            owl.trigger('next.owl.carousel');
-        });
-        $('.portfolio-left-arr').click(function() {
-            var owl = $('.portfolio-carousel');
-            owl.owlCarousel();
-            owl.trigger('prev.owl.carousel');
-        });
+        // document.querySelectorAll('.portfolio-right-arr').forEach(arrow => {
+        //     arrow.addEventListener('click', function(e) {
+        //         console.log(e.target.closest('.col-12'));
+        //         var owlParent = e.target.closest('.col-12');
+        //         var owl = owlParent.querySelector('.portfolio-carousel');
+        //         // owl.owlCarousel();
+        //         owl.trigger('next.owl.carousel');
+        //     });
+        // });
+        
+        // $('.portfolio-left-arr').click(function() {
+        //     var owl = $('.portfolio-carousel');
+        //     owl.owlCarousel();
+        //     owl.trigger('prev.owl.carousel');
+        // });
 
         // ===========================
         //     Testimonial carousel
