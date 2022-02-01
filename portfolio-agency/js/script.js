@@ -136,6 +136,9 @@ jQuery(function ($) {
               }
   
             });
+            $(this).on('loaded.owl.lazy', () => {
+                handleImageResize(el);
+            });
         });
         // Custom Navigation Events
         $('.portfolio-right-arr').each(function() {
