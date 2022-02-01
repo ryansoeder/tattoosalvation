@@ -134,26 +134,35 @@ body{
     position: relative;
 }
 .anim-text {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #000000));
-    background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #000000 50%);
+    /* background-clip: text; */
+    /* -webkit-background-clip: content-box; */
+    /* color: transparent; */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #000000)); */
+    /* background-image: linear-gradient(45deg , #ec3737, #ec3737 50%, rgba(0,0,0,0) 50%);
     background-size: 200% 100%;
-    background-position: 100%;
+    background-position: 100%; */
+    color: black;
 }
-.anim-text-white {
+.anim-text-white.nav-link {
+    /* background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #FFFFFF));
     background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #FFFFFF 50%);
     background-size: 200% 100%;
     background-position: 100%;
+    background-color: white; */
+    color: white;
 }
 
-.anim-text:hover,.anim-text-white:hover,.anim-text:focus,.anim-text-white:focus {
-    -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+.anim-text:hover.nav-link,.anim-text-white:hover.nav-link,
+.anim-text:focus.nav-link,.anim-text-white:focus.nav-link {
+    /* -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
-    background-position: 0%;
+    background-position: 0%; */
+    color: #ec3737;
 }
 .anim-text:focus,.anim-text-white:focus {
     border: 2px solid #ec3737;
@@ -251,6 +260,7 @@ body{
 }
 
 @keyframes rotate-move {
+    0% {transform: translate(-50%, -50%) rotate(0deg)}
     55% {transform: translate(-50%, -50%) rotate(0deg)}
     80% {transform: translate(-50%, -50%) rotate(360deg)}
     100% {transform: translate(-50%, -50%) rotate(360deg)}
@@ -641,6 +651,17 @@ header .navbar-brand img {
     font-weight: 700;
     /* text-transform: lowercase; */
     font-family: 'Montserrat', sans-serif;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #ec3737;
+}
+.side-menu .navbar-nav .nav-link{
+    color: white;
+}
+.side-menu .navbar-nav .nav-link:hover,
+.side-menu .navbar-nav .nav-link:focus {
+    color: #ec3737;
 }
 .navbar-nav .nav-heading{
     text-transform: uppercase;
