@@ -773,6 +773,9 @@ header .navbar-brand img {
     align-items: center;
     /* cursor: pointer; */
 }
+.services-sec .services-boxes .service-card a{
+    text-decoration: none;
+}
 .services-sec .services-boxes .service-card:first-child{
     margin-top: 0;
 }
@@ -782,18 +785,19 @@ header .navbar-brand img {
     margin-left: 20px;
     color: #000000;
     transition: .5s ease;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-gradient(linear, left top, right top, from(#ec3737), color-stop(50%, #ec3737), color-stop(50%, #000000));
     background-image: linear-gradient(to right, #ec3737, #ec3737 50%, #000000 50%);
     background-size: 200% 100%;
-    background-position: 100%;
+    background-position: 100%; */
 }
 
 .services-sec .services-boxes .service-card:hover .icon-holder{
     -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
     transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
-    background-position: 0%;
+    /* background-position: 0%; */
+    color: #ec3737;
 }
 
 .services-sec .services-boxes .service-card.right:hover .icon-holder{
@@ -1246,6 +1250,7 @@ dd {
         width: 100%;
         margin-top: 80px;
         margin-bottom: 0;
+        display: flex;
     }
     .services-sec .services-boxes .service-card.left.icon-right {
         width: 100%;
@@ -1417,7 +1422,9 @@ dd {
         margin-bottom: 20px;
         margin-right: auto;
         margin-left: auto;
-        width: 100%;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
     }
     .testimonial-sec .review-detail .quote-icon {
         position: absolute;
