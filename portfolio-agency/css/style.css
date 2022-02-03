@@ -1151,6 +1151,12 @@ dd {
     display: flex;
     flex-direction: column;
 }
+.piercing-sec .label {
+    margin-bottom: 50px;
+    font-size: 29px;
+    letter-spacing: 2px;
+    width: max-content;
+}
 .piercing-sec .heading {
     margin-bottom: 25px;
 }
@@ -1443,9 +1449,9 @@ dd {
 }
 
 @media (max-width: 500px) {
-    .piercing-sec .container {
+    /* .piercing-sec .container {
         background-image: linear-gradient(to left, rgba(255, 255, 255, .8) 50%, rgba(255, 255, 255, 1)), url(../img/shop/gold.jpg);
-    }
+    } */
     .piercing-sec .info-wrapper {
         max-width: 100%;
     }
