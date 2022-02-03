@@ -74,7 +74,6 @@ jQuery(function ($) {
                 $('.sidenav-bottom').css('opacity','0');
                 $('.sidenav-bottom').removeClass('sidenav-bottom-fixed');
             }
-            console.log('social');
         };
 
         jQuery(function($) {
@@ -94,7 +93,6 @@ jQuery(function ($) {
                 $('.sidenav-bottom').css('opacity','1');
                 $('header .inner-header').removeClass('header-appear');
             }
-            console.log('header');
         };
 
         $(window).on('scroll', throttle(headerScroll, 500));
