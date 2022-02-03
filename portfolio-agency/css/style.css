@@ -580,7 +580,8 @@ header .navbar-brand img {
 }
 
 .side-menu-inner-content .side-menu-footer{
-    position: absolute;
+    /* position: absolute; */
+    width: 100%;
     left: 40px;
     right: 40px;
     bottom: 28px;

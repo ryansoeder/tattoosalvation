@@ -1,3 +1,15 @@
+function throttle (callback, limit) {
+    var waiting = false;                      // Initially, we're not waiting
+    return function () {                      // We return a throttled function
+        if (!waiting) {                       // If we're not waiting
+            callback.apply(this, arguments);  // Execute users function
+            waiting = true;                   // Prevent future invocations
+            setTimeout(function () {          // After a period of time
+                waiting = false;              // And allow future invocations
+            }, limit);
+        }
+    }
+}
 $(window).on("load", function () {
 
     "use strict";
@@ -57,25 +69,23 @@ jQuery(function ($) {
     $(function () {
         var $win = $(window);
 
+        function socialScroll() {
+            if($(window).scrollTop() + $(window).height() < $(document).height() - 300 && $(window).scrollTop() + $(window).height() > $(document).height() - 400 )  {
+                $('.sidenav-bottom').css('opacity','0');
+                $('.sidenav-bottom').removeClass('sidenav-bottom-fixed');
+            }
+            console.log('social');
+        };
+
         jQuery(function($) {
-            $(window).scroll(function() {
-                if($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
-                    // alert("near bottom!");
-                    $('.sidenav-bottom').css('opacity','1');
-                    $('.sidenav-bottom').addClass('sidenav-bottom-fixed');
-                }
-                if($(window).scrollTop() + $(window).height() < $(document).height() - 300 && $(window).scrollTop() + $(window).height() > $(document).height() - 400 )  {
-                    $('.sidenav-bottom').css('opacity','0');
-                    $('.sidenav-bottom').removeClass('sidenav-bottom-fixed');
-                }
-            });
+            $(window).scroll(throttle(socialScroll, 500));
         });
     });
+
         // ===========================
         //    header appear
         // ===========================
-        $(window).on('scroll', function () {
-
+        function headerScroll() {
             if ($(this).scrollTop() > 260) { // Set position from top to add class
                 $('.sidenav-bottom').css('opacity','0');
                 $('header .inner-header').addClass('header-appear');
@@ -84,7 +94,10 @@ jQuery(function ($) {
                 $('.sidenav-bottom').css('opacity','1');
                 $('header .inner-header').removeClass('header-appear');
             }
-        });
+            console.log('header');
+        };
+
+        $(window).on('scroll', throttle(headerScroll, 500));
 
 
         // ===========================
