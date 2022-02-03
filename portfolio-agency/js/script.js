@@ -21,7 +21,7 @@ $(window).on("load", function () {
 
     setTimeout(function(){
         $('.preloader').fadeOut();
-    }, 1000);
+    }, 500);
 
 
 });
