@@ -1029,6 +1029,16 @@ header .navbar-brand img {
 /*=================================
         Custom Styles
 ===================================*/
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 a:focus {
     border: solid 1px #ec3737;
 }
