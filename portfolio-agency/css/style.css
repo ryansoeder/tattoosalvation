@@ -1455,6 +1455,9 @@ dd {
     .piercing-sec .container {
         background-image: linear-gradient(to left, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 1)), url(../img/shop/gold.jpg);
     }
+    .artist .headshot {
+        min-height: 500px;
+    }
 
 }
 
@@ -1464,6 +1467,9 @@ dd {
     } */
     .piercing-sec .info-wrapper {
         max-width: 100%;
+    }
+    .artist .headshot {
+        min-height: 400px;
     }
 }
 /*Extra small devices (portrait phones, less than 576px)*/
