@@ -1,1 +1,1 @@
-fun!
+fun in the sun
