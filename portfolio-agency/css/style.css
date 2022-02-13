@@ -1063,6 +1063,14 @@ dd {
 .info-sec .info-wrapper {
     text-align: center;
 }
+.info-sec .inquiries {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.info-sec .inquiries a {
+    width: 256px;
+}
 .info-sec span {
     margin-bottom: 0.5rem;
 }
@@ -1470,6 +1478,9 @@ dd {
     }
     .artist .headshot {
         min-height: 400px;
+    }
+    .info-sec a {
+        width: 256px;
     }
 }
 /*Extra small devices (portrait phones, less than 576px)*/
